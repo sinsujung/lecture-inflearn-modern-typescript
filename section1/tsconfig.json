@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "skipLibCheck": true,
+    //js 파일 어디 저장할지
+    "outDir": "dist",
+    //타입 검사를 얼마나 엄격하게 할지
+    "strict": false,
+    "moduleDetection": "force",                            /* Skip type checking all .d.ts files. */
+  },
+
+  "include": ["src"],
+}
