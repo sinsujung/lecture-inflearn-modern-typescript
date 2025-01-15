@@ -1,1 +1,0 @@
-# lecture-inflearn-modern-typescript
