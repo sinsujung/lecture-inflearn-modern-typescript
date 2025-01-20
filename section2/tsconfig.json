@@ -5,6 +5,8 @@
       "skipLibCheck": true,
       "outDir": "dist",
       "strict": true,
+      // 엄격한 null 검사
+    //   "strictNullChecks": false,
       "moduleDetection": "force"
     },
     "ts-node": {
