@@ -22,6 +22,7 @@ let unde1 = undefined;
 // strictNullCheck 가 true면 아래 오류 , false면 오류 x
 // let numA: number = null;
 // 리터럴 타입
+// 리터럴 -> 값
 let numA = 10;
 // num = 12;
 let strA = "hello";

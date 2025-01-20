@@ -1,0 +1,65 @@
+// 타입 별칭 : 타입을 변수처럼 정의해서 사용할 수 있는 타입 별칭
+
+type User = {
+    id: number;
+    name: string;
+    nickname: string;
+    birth: string;
+    bio: string;
+    location: string;
+};
+
+// 동일한 스코프에 중복된 이름으로 별칭을 선언하면 오류 발생!!(중복 주의)
+
+//만약 fucntion이 있고 함수 내 type User가 있으면 func 함수 안에서는 안에 있는 User가 타입이 되고, 함수 밖에서는 밖에 있는 User가 타입이 된다.
+function func() {
+    type User = {};
+}
+
+let user1: User = {
+    id: 1,
+    name: "신수정",
+    nickname: "yehchic",
+    birth: "1999.04.20",
+    bio: "안녕하세요",
+    location: "서울시",
+};
+
+let user2: User = {
+    id: 2,
+    name: "뤂둥이",
+    nickname: "yehchic",
+    birth: "1999.04.20",
+    bio: "안녕하세요",
+    location: "서울시",
+};
+
+// 인덱스 시그니처 : 키와 벨루의 타입을 기준으로 규칙을 이용해 객체의 타입을 정의하는 것
+type CountryCodes = {
+    [key : string] : string;
+};
+
+let countryCodes: CountryCodes = {
+    Korea: 'ko',
+    UnitedState : 'us',
+    UnitedKingdom : 'uk',
+};
+
+type CountryNumberCodes = {
+    [key : string] : number;
+    //반드시 작성할 객체 적는 법
+    Korea: number;
+};
+
+// let countryNumberCodes : CountryNumberCodes = {
+//     Korea: 410,
+//     UnitedState: 840,
+//     UnitedKingdom: 826,
+// };
+
+// 인덱스 시그니처 사용 시 주의사항
+// 규칙을 위반하지만 않으면 모든 객체를 허용하는 타입이다.
+
+let countryNumberCodes: CountryNumberCodes = {
+    Korea: 410,
+}
