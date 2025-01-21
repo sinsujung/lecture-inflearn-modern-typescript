@@ -19,4 +19,19 @@ let user2 = {
     bio: "안녕하세요",
     location: "서울시",
 };
+let countryCodes = {
+    Korea: 'ko',
+    UnitedState: 'us',
+    UnitedKingdom: 'uk',
+};
+// let countryNumberCodes : CountryNumberCodes = {
+//     Korea: 410,
+//     UnitedState: 840,
+//     UnitedKingdom: 826,
+// };
+// 인덱스 시그니처 사용 시 주의사항
+// 규칙을 위반하지만 않으면 모든 객체를 허용하는 타입이다.
+let countryNumberCodes = {
+    Korea: 410,
+};
 export {};
