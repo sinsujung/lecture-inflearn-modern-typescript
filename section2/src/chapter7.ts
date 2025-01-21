@@ -29,10 +29,10 @@ function func4(): never {
     throw new Error();
 }
 
-let a: never;
-a = 1;
-a = {};
-a = "";
-a = undefined;
-a = null;
-a = anyVar;
+// let a: never;
+// a = 1;
+// a = {};
+// a = "";
+// a = undefined;
+// a = null;
+// a = anyVar;
