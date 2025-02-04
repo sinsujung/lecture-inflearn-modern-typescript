@@ -2,18 +2,24 @@
  * keyof 연산자
  */
 
-interface Person {
-    name: string;
-    age: number;
-}
+// 1.
+type Person = typeof person;
 
-function getPropertyKey(person: Person, key: "name" | "age") {
+//2 .
+// interface Person {
+//     name: string;
+//     age: number;
+// }
+
+function getPropertyKey(person: Person, key: keyof typeof person) {
     return person[key];
 }
 
-const person: Person = {
+const person = {
     name: "신수정",
     age: 27,
 };
 
-getPropertyKey(person, "name");
+const result = getPropertyKey(person, "name");
+
+console.log(result);
